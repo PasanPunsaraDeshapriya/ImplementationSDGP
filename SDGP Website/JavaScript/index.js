@@ -1,5 +1,5 @@
 $(".university").click(function(){
-  window.location.href = "programFinder.html";
+  window.location.href = "UniversityFinder.html";
 });
 
 $(".program").click(function(){
