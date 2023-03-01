@@ -1,0 +1,22 @@
+
+h1 {
+  font-family: 'Gloock', serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.question-section{
+  padding: 20px;
+}
+
+#footer{
+  padding: 5% 15% 2px 15%;
+  text-align: center;
+  background-color: #5BC0F8;
+}
+
+.social-icon{
+  margin: 20px 10px;
+}
