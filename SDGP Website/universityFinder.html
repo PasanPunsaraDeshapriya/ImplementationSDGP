@@ -24,21 +24,39 @@
 
 <body>
   <h1>University Finder</h1>
-  <form class="" action="index.html" method="post">
     <div class="question-section">
       <p class="questions"> 1. What kind of program are you looking for ?</p>
 
-      <input type="radio" id="" name="question-1" value="degree" required>
-      <label for="option-1">degree</label><br>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optradio">Degree Program
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optradio">Foundation Program
+        </label>
+      </div>
+      <div class="form-check disabled">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optradio">Masters Degree Program
+        </label>
+      </div>
 
-      <input type="radio" id="" name="question-1" value="masters">
-      <label for="option-2">masters</label><br>
+      <p class="questions"> 2. What is The Location Of The Univeristy ?</p>
 
-      <input type="radio" id="" name="question-1" value="foundation">
-      <label for="option-3">foundation</label>
+      <div class="dropdown">
+        <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+          Select Location
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+      </div>
     </div>
 
-  </form>
 
   <footer id="footer">
     <i class="social-icon fab fa-facebook f"></i>

@@ -20,3 +20,21 @@ h1 {
 .social-icon{
   margin: 20px 10px;
 }
+
+.dropdown-toggle{
+  margin-right: 50px;
+  color: #5BC0F8;
+  font-family: 'Gloock', serif;
+}
+
+.dropdown-toggle:hover{
+  background-color: #5BC0F8;
+}
+
+.form-check{
+  padding: 5px;
+}
+
+.question-section{
+  padding-right: 10px;
+}
