@@ -16,6 +16,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Merriweather:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Merriweather:wght@700&family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -24,38 +26,101 @@
 
 <body>
   <h1>University Finder</h1>
-    <div class="question-section">
-      <p class="questions"> 1. What kind of program are you looking for ?</p>
+  <div class="question-section">
+    <p class="questions"> 1. What kind of program are you looking for ?</p>
 
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optradio">Degree Program
-        </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optradio">Foundation Program
-        </label>
-      </div>
-      <div class="form-check disabled">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optradio">Masters Degree Program
-        </label>
-      </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Degree Program
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Foundation Program
+      </label>
+    </div>
+    <div class="form-check disabled">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Masters Degree Program
+      </label>
+    </div>
 
-      <p class="questions"> 2. What is The Location Of The Univeristy ?</p>
+    <hr class="separator separator--dots" />
 
-      <div class="dropdown">
-        <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-          Select Location
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
-        </div>
+    <p class="questions"> 2. What is The Location Of The Univeristy ?</p>
+
+    <!-- <div class="dropdown">
+      <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle form-select" data-toggle="dropdown">
+        Select Location
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </div> -->
+
+    <!-- <div class="form-group custom-form">
+      <select class="form-control" id="exampleSelect">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+      </select>
+    </div> -->
+    <hr class="separator separator--dots" />
+  </div>
+
+  <div class="container py-2">
+    <h2 class="font-weight-light">Bootstrap 4 Selectpicker 😊</h2>
+    <div class="row">
+      <div class="col">
+        <select class="selectpicker border rounded" data-live-search="true" data-width="100%">
+          <option data-tokens="">Default (auto size/scroll to viewport height)</option>
+          <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+          <option data-tokens="mustard">Burger, Shake and a Smile</option>
+          <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+          <option data-tokens="more">More food here</option>
+          <option data-tokens="more1">More food here</option>
+          <option data-tokens="more2">More food here</option>
+          <option data-tokens="more3">More food here</option>
+          <option data-tokens="more4">More food here</option>
+          <option data-tokens="more5">More food here</option>
+          <option data-tokens="more6">More food here</option>
+          <option data-tokens="more7">More food here</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="selectpicker border rounded mh" data-live-search="true" data-width="100%">
+          <option data-tokens="">Custom max height using CSS</option>
+          <option data-tokens="mustard">Burger, Shake and a Smile</option>
+          <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+          <option data-tokens="more">More food here</option>
+          <option data-tokens="more1">More food here</option>
+          <option data-tokens="more2">More food here</option>
+          <option data-tokens="more3">More food here</option>
+          <option data-tokens="more4">More food here</option>
+          <option data-tokens="more5">More food here</option>
+          <option data-tokens="more6">More food here</option>
+          <option data-tokens="more7">More food here</option>
+        </select>
       </div>
     </div>
+  </div>
+
+  <div class="form-group">
+    <label for="example-select">Select an option:</label>
+    <select class="form-control selectpicker" id="example-select" data-live-search="true">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+      <option value="5">Option 5</option>
+      <option value="6">Option 6</option>
+    </select>
+  </div>
+
 
 
   <footer id="footer">
@@ -66,6 +131,8 @@
     <p>© Copyright EICF</p>
 
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="JavaScript/university.js"></script>
 </body>
 
 </html>
