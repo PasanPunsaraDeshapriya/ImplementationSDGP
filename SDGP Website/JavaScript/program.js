@@ -242,15 +242,16 @@ $(document).ready(function() {
 
       // Print the highest three numbers
       console.log("The highest three numbers are: " + numbers[0][0] + " " + numbers[0][1] + " , " + numbers[1][0] + " " + numbers[1][1] + " , " + numbers[2][0] + " " + numbers[2][1]);
-
-      fetch('http://localhost:8000/dataset.csv')
-        .then(response => response.text())
-        .then(data => {
-          // Parse the CSV data
-          const rows = data.split('\n').map(row => row.split(','));
-          console.log(rows);
-        })
-        .catch(error => console.error(error));
+      var newNumber = numbers[0][1]+numbers[1][1]+numbers[2][1];
+      console.log(newNumber);
+      // fetch('http://localhost:8000/dataset.csv')
+      //   .then(response => response.text())
+      //   .then(data => {
+      //     // Parse the CSV data
+      //     const rows = data.split('\n').map(row => row.split(','));
+      //     console.log(rows);
+      //   })
+      //   .catch(error => console.error(error));
 
       // Display the result
       $("#result").text("You got r as " + r + " i as " + i + " a as " + a + " s as " + s + " e as " + e + " c as " + c);
