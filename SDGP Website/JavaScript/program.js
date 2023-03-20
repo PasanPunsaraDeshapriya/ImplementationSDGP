@@ -254,7 +254,7 @@ $(document).ready(function() {
       //   .catch(error => console.error(error));
 
       // Display the result
-      $("#result").text("You got r as " + r + " i as " + i + " a as " + a + " s as " + s + " e as " + e + " c as " + c);
+      $("#result").text("the pathway number you got is " + newNumber);
     }
   });
 })
