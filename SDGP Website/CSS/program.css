@@ -54,3 +54,7 @@ hr {
 .mh .dropdown-menu {
     max-height: 100px;
 }
+
+.submit-button{
+  margin : 20px 40px;;
+}
