@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { PythonShell } = require('python-shell');
+const mime = require('mime');
 
 const app = express();
 const port = 3000;

@@ -41,17 +41,16 @@ clf_nb.fit(X_train, y_train)
 MultinomialNB()
 pred_nb = clf_nb.predict(X_test)
 
-import pickle
-with open('my_model.pkl', 'wb') as f:
-     pickle.dump(clf_nb, f)
-
-f = open('my_model.pkl', 'rb')  # 'r' for reading; can be omitted
-mod = pickle.load(f)
-
-print(classification_report(y_test,pred_nb))
-
-text = ['doctor']
-text_features = tfidf.transform (text)
-predictions = mod.predict (text_features)
-print(predictions)
-
+# import pickle
+# with open('my_model.pkl', 'wb') as f:
+#      pickle.dump(clf_nb, f)
+#
+# f = open('my_model.pkl', 'rb')  # 'r' for reading; can be omitted
+# mod = pickle.load(f)
+#
+# print(classification_report(y_test,pred_nb))
+#
+# text = ['doctor']
+# text_features = tfidf.transform (text)
+# predictions = mod.predict (text_features)
+# print(predictions)
