@@ -6,7 +6,7 @@ app = Flask(__name__)
 model=pickle.load(open('my_model.pkl', 'rb'))
 @app.route('/')
 def hello_world():
-    return render_template("careerFinderSurvey.html")
+    return render_template("careerFinderModel.html")
 
 @app.route('/predict',methods=['POST','GET'])
 def predict():
@@ -15,10 +15,10 @@ def predict():
     prediction = model.predict_proba(final)
 
     if prediction == ("in demand"):
-        return render_template('careerFinder.html',pred="this career is in demand")
+        return render_template('careerFinderModel.html',pred="this career is in demand")
     else :
-        return render_template('careerFinder.html',pred="this career is not in demand")
+        return render_template('careerFinderModel.html',pred="this career is not in demand")
 
 
 if __name__ == '  main  ':
-    app.run()
+    app.run(debug=True)
