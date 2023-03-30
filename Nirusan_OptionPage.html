@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Three Divs Covering Entire Page</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			height: 100vh;
+			width: 100vw;
+		}
+		.col {
+			flex: 1;
+			height: 100%;
+		}
+		.col1 {
+			background-color: red;
+		}
+		.col2 {
+			background-color: green;
+		}
+		.col3 {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="col col1"></div>
+		<div class="col col2"></div>
+		<div class="col col3"></div>
+	</div>
+</body>
+</html>
