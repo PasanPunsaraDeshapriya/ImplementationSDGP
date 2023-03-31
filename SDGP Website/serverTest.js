@@ -12,7 +12,7 @@ app.get('/', function(req, res) {
 });
 
 // Handle POST requests to the /predict endpoint
-app.post('/predict', function(req, res) {
+app.post('/', function(req, res) {
   // Parse the input data from the request body
   var inputData = req.body;
 
