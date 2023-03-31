@@ -8,7 +8,7 @@ model=pickle.load(open('my_model.pkl', 'rb'))
 def hello_world():
     return render_template("careerFinderModel.html")
 
-@app.route('/predict',methods=['POST','GET'])
+@app.route('/',methods=['POST','GET'])
 def predict():
     # console.log('Received request:', req.method, req.url);
     # init_features=[int(x) for x in request.form.values()]
