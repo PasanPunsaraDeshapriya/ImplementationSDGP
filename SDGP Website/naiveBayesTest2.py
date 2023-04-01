@@ -8,17 +8,14 @@ from sklearn.metrics import classification_report
 
 path = 'dataset.csv'
 df = pd.read_csv(path)
-df.head()
 
 df = df.drop(['career pathway'], axis=1)
 print(df.head())
 
+print(df['in demand for the next 10 years?'].value_counts())
 print('found %s datas'% len(df))
 
-print(df['in demand for the next 10 years?'].value_counts())
-
 df = df.rename(columns={'career name': 'type of career', 'in demand for the next 10 years?': 'in demand'})
-print(df.head)
 df['in demand'] = df['in demand'].map({'yes': 'in demand', 'no': 'not in demand'})
 print(df.head)
 
