@@ -9,7 +9,7 @@ cluster = MongoClient("mongodb+srv://CS3:OS18@cluster0.a6pcbds.mongodb.net/?retr
 database = cluster["Sdgp_Test"]
 collection = database["career"]
 collection_Signup = database["signUp"]
-# with open("CSV_Files/Enterprising.csv", "r") as file:
+# with open("Data_Files/Enterprising.csv", "r") as file:
 #     reader = csv.reader(file)
 #     header = next(reader)
 #     for row in reader:
@@ -46,7 +46,7 @@ def signup():
         'password': password
     }
     collection_Signup.insert_one(user)
-    return 'User signed up!'
+    return render_template("Nirusan_OptionPage.html")
 
 
 # 127.0.0.1 is the local machines IP address
