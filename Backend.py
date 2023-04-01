@@ -23,6 +23,7 @@ career_list = []
 for documents in retreive:
     career_list.append(documents)
 
+# Showing data to the web page
 @app.route("/")
 def hello_world():
     return render_template('home.html', career_list = career_list )
