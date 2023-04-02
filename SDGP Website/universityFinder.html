@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>University Finder</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/University.css">
+
+  <script src="https://kit.fontawesome.com/f5253fe975.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2062bda610.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Merriweather:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Merriweather:wght@700&family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1>University Finder</h1>
+  <div class="question-section">
+    <p class="questions"> 1. What kind of program are you looking for ?</p>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Degree Program
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Foundation Program
+      </label>
+    </div>
+    <div class="form-check disabled">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Masters Degree Program
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+
+    <p class="questions"> 2. What is The Location Of The Univeristy ?</p>
+
+    <!-- <div class="dropdown">
+      <button type="button" class="btn btn-outline-primary btn-sm dropdown-toggle form-select" data-toggle="dropdown">
+        Select Location
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </div> -->
+
+    <!-- <div class="form-group custom-form">
+      <select class="form-control" id="exampleSelect">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+      </select>
+    </div> -->
+    <div class="form-group custom-form">
+      <select class="form-control selectpicker" id="example-select" data-live-search="true">
+        <option value="1">Western province</option>
+        <option value="2">Eastern Province</option>
+        <option value="3">Central Province</option>
+        <option value="4">Southern Province</option>
+        <option value="5">Sabaragamuwa Province</option>
+        <option value="6">Nothern Province</option>
+        <option value="7">North Central Province</option>
+        <option value="8">North Western Province</option>
+      </select>
+    </div>
+    <hr class="separator separator--dots" />
+
+    <p class="questions">3.What size of university are you interested in attending?</p>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Small
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Meduim
+      </label>
+    </div>
+    <div class="form-check disabled">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Large
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+
+    <p class="questions">4.What is your anticipated budget for attending university?</p>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">High Budget
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Mid Budget
+      </label>
+    </div>
+    <div class="form-check disabled">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Low budget
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">5.What is your preferd type of university to attend to?</p>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Private University
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optradio">Public Univeristy
+      </label>
+    </div>
+  </div>
+  </div>
+
+
+  <footer id="footer">
+    <i class="social-icon fab fa-facebook f"></i>
+    <i class="social-icon fab fa-twitter f"></i>
+    <i class="social-icon fab fa-instagram f"></i>
+    <i class="social-icon fa fa-envelope f"></i>
+    <p>© Copyright EICF</p>
+
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="JavaScript/university.js"></script>
+</body>
+
+</html>

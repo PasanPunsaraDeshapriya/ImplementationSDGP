@@ -1,0 +1,60 @@
+h1 {
+  font-family: 'Gloock', serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+hr {
+  border: dotted #EEEEEE 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 30px auto;
+}
+
+.question-section {
+  padding: 40px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.questions {
+  padding-top: 10px;
+}
+
+#footer {
+  padding: 5% 15% 2px 15%;
+  text-align: center;
+  background-color: #5BC0F8;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+.form-check {
+  padding: 10px 40px;
+}
+
+.question-section {
+  padding-right: 10px;
+}
+
+.form-group {
+  width: 30%;
+  padding: 0px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group option:checked {
+  background-color: #5BC0F8;
+  color: white;
+}
+
+.mh .dropdown-menu {
+    max-height: 100px;
+}
+
+.submit-button{
+  margin : 20px 40px;
+}

@@ -1,0 +1,142 @@
+h1 {
+  font-family: 'Gloock', serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.container-fluid {
+  padding: 3% 15% 7%;
+}
+
+/* navigation bar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+.Download-Button {
+  margin: 5% 3% 5% 0;
+}
+
+.btn-dark {
+  padding: 1.5% 5% 1.5% 5%;
+}
+
+#title {
+  background-color: #5BC0F8;
+  color: white;
+}
+
+#features {
+  padding: 7% 15%;
+  text-align: center;
+  background-color: white;
+  position: relative;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+.h3f {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.pf {
+  color: #8f8f8f;
+}
+
+.font-awesome-f {
+  color: #86E5FF;
+  padding-bottom: 6%;
+}
+
+.font-awesome-f:hover {
+  color: #5BC0F8;
+}
+
+#testimonials {
+  text-align: center;
+  background-color: #5BC0F8;
+  color: white;
+}
+
+.testimonials-h2 {
+  font-family: 'Gloock', serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.testimonials-img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.testimonials-img2 {
+  width: 8.5%;
+  margin: 20px;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+#products {
+  padding: 100px 100px 35px 100px;
+}
+
+.products-h2 {
+  font-family: 'Gloock', serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.product-p {
+  color: #8f8f8f;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-col{
+  padding: 3% 2%;
+  text-align: center;
+}
+
+.product-sub{
+  font-family: 'Gloock', serif;
+  /* font-weight: 900; */
+  font-size: 2.5rem;
+  line-height: 1.5;
+  /* text-align: center; */
+}
+
+#footer{
+  padding: 5% 15% 2px 15%;
+  text-align: center;
+}
+
+.social-icon{
+  margin: 20px 10px;
+}
