@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'Nirusan_CareerDisplay.css' )}}"> 
+  <meta http-equiv="X-UA-Compatible" con tent="ie=edge">
+  <!-- The tital argument which got passed inside the return method will come here -->
+  <!-- If there is a title then this will get print -->
+    {% if title %}
+      <title>Flask Blog - {{ title }}</title>
+
+      <!-- If there is no title then it will get print -->
+    {% else %}
+      <title>Flask Blog</title>
+    {% endif %}
+</head>
+
+<body>
+
+    <!-- Creating a for loop and sharing information which in the python dictonary to html -->
+    <table>
+      <tr>
+        <th>Interest Code</th>
+        <th>Job Zone</th>
+        <th>Occupation</th>
+        <th>Feature</th>
+      </tr>
+    {% for post in career_list %}
+          <tr>
+            <td>{{post.Interest_Code}}</td>
+            <td>{{post.Job_Zone}}</td>
+            <td>{{post.Code}}</td>
+            <td>{{post.Occupation}}</td>
+            <td>{{post.Featured}}</td>
+          </tr>
+    {% endfor %}
+  </table>
+
+</body>
+</html>
