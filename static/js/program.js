@@ -1,3 +1,4 @@
+console.log("file is working");
 $(document).ready(function() {
   $("#submit").click(function() {
     var r = 0;
