@@ -28,6 +28,22 @@ for documents in retreive:
 def home():
     return render_template('Oneth_homePage.html')
 
+@app.route('/careerFinder')
+def careerFinder():
+    return render_template('Oneth_careerFinder.html')
+
+@app.route('/careerFinderModel')
+def careerFinderModel():
+    return render_template('Oneth_careerFinderModel.html')
+
+@app.route('/careerSurvey')
+def careerSurvey():
+    return render_template('Oneth_careerFinderSurvey.html')
+
+@app.route('/programSurvey')
+def programSurvey():
+    return render_template('Oneth_careerFinderSurvey.html')
+
 # Showing data to the web page
 @app.route("/career")
 def career():
