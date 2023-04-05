@@ -72,6 +72,9 @@ def signup():
     collection_Signup.insert_one(user)
     return render_template("Nirusan_OptionPage.html")
 
+@app.route('/login')
+def login():
+    return render_template('Nirusan_Login.html')
 # 127.0.0.1 is the local machines IP address
 # 5000 port is for TCP
 if __name__ == "__main__":

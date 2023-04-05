@@ -25,7 +25,7 @@
   <section id="title">
     <div class="container-fluid">
       <nav class="navbar  navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="">EICF</a>
+        <a href=""><img src="{{ url_for('static', filename='images/logo2.png') }}" style="width: 200px; border-radius: 30px;" alt="iit-logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,8 +47,8 @@
         <div class="col-lg-6">
           <h1>Choose Whats Best For Your Future.</h1>
 
-          <button type="button" class="btn btn-dark btn-lg Download-Button"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
-          <button type="button" class="btn btn-outline-light btn-lg Download-Button"><i class="fa-solid fa-user-plus"></i> Sign up</button>
+          <a href="{{ url_for('login') }}"><button type="button" class="btn btn-dark btn-lg Download-Button"><i class="fa-solid fa-right-to-bracket"></i> Login</button></a> 
+          <a href="{{ url_for('signup') }}"><button type="button" class="btn btn-outline-light btn-lg Download-Button"><i class="fa-solid fa-user-plus"></i> Sign up</button></a> 
         </div>
       </div>
   </section>
@@ -82,18 +82,18 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <h2 class="testimonials-h2">Find the most ideal Univeristy for you.</h2>
-          <img class="testimonials-img" src="images/iit.png" alt="iit-logo">
+          <img class="testimonials-img" src="{{ url_for('static', filename='images/iit.png') }}" alt="iit-logo">
           <em>IIT, Sri lanka</em>
         </div>
         <div class="carousel-item">
           <h2 class="testimonials-h2">Find the most suitable educational program for you.</h2>
-          <img class="testimonials-img2" src="images/cam.png" alt="cambridge-logo">
+          <img class="testimonials-img2" src="{{ url_for('static', filename='images/cam.png') }}" alt="cambridge-logo">
           <em>cambridge, UN</em>
         </div>
 
         <div class="carousel-item">
           <h2 class="testimonials-h2">Choose the best career pathway for you</h2>
-          <img class="testimonials-img" src="images/career.jpg" alt="software-logo">
+          <img class="testimonials-img" src="{{ url_for('static', filename='images/career.jpg') }}" alt="software-logo">
           <em>Software Engineer, Ethical hacker</em>
         </div>
 
