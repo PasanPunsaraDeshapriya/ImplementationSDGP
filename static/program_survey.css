@@ -25,7 +25,8 @@ hr {
 #footer {
   padding: 5% 15% 2px 15%;
   text-align: center;
-  background-color: #5BC0F8;
+  background-color: blue;
+  color: white;
 }
 
 .social-icon {
@@ -34,10 +35,6 @@ hr {
 
 .form-check {
   padding: 10px 40px;
-}
-
-.question-section {
-  padding-right: 10px;
 }
 
 .form-group {

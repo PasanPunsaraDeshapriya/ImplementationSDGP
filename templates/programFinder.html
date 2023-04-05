@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Educational Program Finder</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/ImplementationSDGP/static/program_survey.css"> 
+
+  <script src="https://kit.fontawesome.com/f5253fe975.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/2062bda610.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1>Program Finder</h1>
+  <h3>Read each statement. If you agree with the statement, fill in the circle. There are no wrong answers!</h3>
+  <form action="">
+
+
+  <form>
+  <div class="question-section">
+    <p class="questions">1. I like to work on cars</p>
+
+    <div>
+      <label>
+        <input type="radio"  name="q1" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q1" value="no">No I Don't
+      </label>
+    </div>
+
+
+    <hr class="separator separator--dots" />
+
+    <p class="questions">2. I like to do puzzles</p>
+    <div>
+      <label>
+        <input type="radio"  name="q2" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q2" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+
+    <p class="questions">3. I am good at working independently</p>
+    <div>
+      <label>
+        <input type="radio"  name="q3" value="yes">Yes I am
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q3" value="no">No I'm Not
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">4. I like to work in teams</p>
+    <div>
+      <label>
+        <input type="radio"  name="q4" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q4" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">5. I am an ambitious person, I set goals for myself</p>
+    <div>
+      <label>
+        <input type="radio"  name="q5" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q5" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">6. I like to organize things,(files, desks/offices)</p>
+    <div>
+      <label>
+        <input type="radio"  name="q6" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q6" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">7. I like to build things</p>
+    <div>
+      <label>
+        <input type="radio"  name="q7" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q7" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">8. I like to read about art and music</p>
+    <div>
+      <label>
+        <input type="radio"  name="q8" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q8" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">9. I like to have clear instructions to follow</p>
+    <div>
+      <label>
+        <input type="radio"  name="q9" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q9" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">10. I like to try to influence or persuade people</p>
+    <div>
+      <label>
+        <input type="radio"  name="q10" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q10" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">11. I like to do experiment</p>
+    <div>
+      <label>
+        <input type="radio"  name="q11" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q11" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">12. I like to teach or train people</p>
+    <div>
+      <label>
+        <input type="radio"  name="q12" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q12" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">13. I like trying to help people solve their problems</p>
+    <div>
+      <label>
+        <input type="radio"  name="q13" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q13" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">14. I like to take care of animals</p>
+    <div>
+      <label>
+        <input type="radio"  name="q14" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q14" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">15. I wouldn’t mind working 8 hours per day in an office</p>
+    <div>
+      <label>
+        <input type="radio"  name="q15" value="yes">Yes I wouldn't Mind
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q15" value="no">No I would Mind
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">16. I like selling things</p>
+    <div>
+      <label>
+        <input type="radio"  name="q16" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q16" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">17. I enjoy creative writing</p>
+    <div>
+      <label>
+        <input type="radio"  name="q17" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q17" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">18. I enjoy science</p>
+    <div>
+      <label>
+        <input type="radio"  name="q18" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q18" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">19. I am quick to take on new responsibilities</p>
+    <div>
+      <label>
+        <input type="radio"  name="q19" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q19" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">20. I am interested in healing people</p>
+    <div>
+      <label>
+        <input type="radio"  name="q20" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q20" value="no">No I Don't
+      </label>
+    </div>
+
+    <hr class="separator separator--dots" />
+    <p class="questions">21. I enjoy trying to figure out how things work</p>
+    <div>
+      <label>
+        <input type="radio"  name="q21" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q21" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">22.I like putting things together or assembling things</p>
+    <div>
+      <label>
+        <input type="radio"  name="q22" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q22" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">23.I am a creative person</p>
+    <div>
+      <label>
+        <input type="radio"  name="q23" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q23" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">24.I pay attention to details</p>
+    <div>
+      <label>
+        <input type="radio"  name="q24" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q24" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">25.I like to do filing or typing</p>
+    <div>
+      <label>
+        <input type="radio"  name="q25" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q25" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">26. I like to analyze things (problems/situations)
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q26" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q26" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">27. I like to play instruments or sing
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q27" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q27" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">28. I enjoy learning about other cultures
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q28" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q28" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">29. I would like to start my own business
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q29" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q29" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">30. I like to cook
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q30" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q30" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">31. I like acting in plays
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q31" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q31" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">32. I am a practical person
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q32" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q32" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">33. I like working with numbers or charts
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q33" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q33" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">34. I like to get into discussions about issues
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q34" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q34" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">35. I am good at keeping records of my work
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q35" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q35" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">36. I like to lead
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q36" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q36" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">37. I like working outdoors
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q37" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q37" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">38. I would like to work in an office
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q38" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q38" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">39. I'm good at math
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q39" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q39" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">40. I like helping people
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q40" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q40" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">41. I like to draw
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q41" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q41" value="no">No I Don't
+      </label>
+    </div>
+    <hr class="separator separator--dots" />
+    <p class="questions">42. I like to give speeches
+    </p>
+    <div>
+      <label>
+        <input type="radio"  name="q42" value="yes">Yes I Do
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="radio"  name="q42" value="no">No I Don't
+      </label>
+    </div>
+  </div>
+  <button class="btn btn-outline-dark btn-lg submit-button" id="submit">Submit</button>
+  <div id="result"></div>
+
+
+
+  <footer id="footer">
+    <i class="social-icon fab fa-facebook f"></i>
+    <i class="social-icon fab fa-twitter f"></i>
+    <i class="social-icon fab fa-instagram f"></i>
+    <i class="social-icon fa fa-envelope f"></i>
+    <p>© Copyright EICF</p>
+
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="JavaScript/program.js"></script>
+</body>
+
+</html>

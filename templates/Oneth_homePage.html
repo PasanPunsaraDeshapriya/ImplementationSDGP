@@ -29,16 +29,17 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link"  href="#footer">University Finder</a>
+              <a class="nav-link"  href="{{ url_for('universityFinder') }}">University Finder</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#footer">Program Finder</a>
+              <a class="nav-link" href="{{ url_for('programSurvey') }}">Program Finder</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#footer">Career Finder</a>
+              <a class="nav-link" href="{{ url_for('careerSurvey') }}">Career Finder</a>
             </li>
           </ul>
         </div>
@@ -126,7 +127,7 @@
             <p class="product-p">Upto 70 universities to choose from island wide</p>
             <p class="product-p">access universities based on numerous filters and preferences</p>
             <p class="product-p">simple 10 minute survey</p> <br>
-            <button  class="btn btn-outline-dark btn-lg btn-block university" type="button">Take Survey</button>
+            <a href="{{ url_for('universityFinder') }}"><button  class="btn btn-outline-dark btn-lg btn-block university" type="button">Take Survey</button></a> 
           </div>
         </div>
       </div>
@@ -141,7 +142,8 @@
             <p class="product-p">Upto a thousand programs and faculties to choose from</p>
             <p class="product-p">Filter numerous programs based on multiple preferences</p>
             <p class="product-p">Simple 15 - 20 minute survey</p>
-            <button  class="btn btn-outline-dark btn-lg btn-block program" type="button">Take Survey</button>
+            <a href="{{ url_for('programSurvey') }}"><button  class="btn btn-outline-dark btn-lg btn-block program" type="button">Take Survey</button></a>
+            
           </div>
         </div>
       </div>
@@ -156,8 +158,7 @@
             <p class="product-p">Upto 250 career pathways and professions to choose from</p>
             <p class="product-p">Filter between countless career pathways to choose from</p>
             <p class="product-p">Simple 15 - 20 minute survey</p>
-            <button class="btn btn-outline-dark btn-lg btn-block career" type="button">Take Survey</button>
-
+            <a href="{{ url_for('careerSurvey') }}"><button class="btn btn-outline-dark btn-lg btn-block career" type="button">Take Survey</button></a>
           </div>
         </div>
       </div>
