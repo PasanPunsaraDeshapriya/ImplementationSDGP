@@ -1,3 +1,7 @@
+body{
+  background-color: rgb(28, 28, 209);
+  color: white;
+}
 h1 {
   font-family: 'Gloock', serif;
   font-weight: 900;
@@ -16,12 +20,20 @@ hr {
 .question-section {
   padding: 40px;
   font-family: 'Raleway', sans-serif;
+  background-color: rgb(212, 208, 208);
+  /* font-size: px; */
+  color: black;
+  width: 500px;
+  margin-left: 35%;
+  border-radius: 30px;
 }
 
 .questions {
   padding-top: 10px;
 }
-
+div label{
+  margin-left: 30px;
+}
 #footer {
   padding: 5% 15% 2px 15%;
   text-align: center;
@@ -53,5 +65,8 @@ hr {
 }
 
 .submit-button{
-  margin : 20px 40px;
+  margin : 20px 40px 30px 47%;
+  background-color: rgb(239, 55, 55);
+  border-radius: 6px;
+  
 }
