@@ -1,0 +1,14 @@
+body{background-color: #5BC0F8;
+text-align: center;}
+
+.header{
+  padding: 20px;
+}
+
+.buttons{
+  padding-top: 50px;
+}
+
+.btn{
+  margin:  20px;
+}
