@@ -6,7 +6,7 @@
   <title>Educational Program Finder</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="/ImplementationSDGP/static/program_survey.css"> 
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'program_survey.css' )}}"> 
 
   <script src="https://kit.fontawesome.com/f5253fe975.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/2062bda610.js" crossorigin="anonymous"></script>
@@ -23,8 +23,12 @@
 </head>
 
 <body>
-  <h1>Program Finder</h1>
-  <h3>Read each statement. If you agree with the statement, fill in the circle. There are no wrong answers!</h3>
+  <h1>
+    <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo2.png') }}" 
+        style="width: 200px; border-radius: 30px; float: left; margin-top: 20px" alt="iit-logo"></a>
+    <span style="position: relative; right: 100px; top: 10px;">Program Finder</span> 
+</h1>
+  <h4>Read each statement. If you agree with the statement, fill in the circle. <span style="color: black; text-shadow: 0.5px 0.5px 0.5px red;"> There are no wrong answers! </span></h4>
   <form action="">
 
 
@@ -577,7 +581,7 @@
   </div>
   <button class="btn btn-outline-dark btn-lg submit-button move" id="submit">Submit</button>
   <div id="result"></div>
-
+</form>
 
 
   <footer id="footer">
@@ -589,7 +593,7 @@
 
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="JavaScript/program.js"></script>
+  <script src="{{ url_for('static', filename='js/my-script.js') }}"></script>
 </body>
 
 </html>

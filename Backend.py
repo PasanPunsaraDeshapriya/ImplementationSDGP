@@ -25,6 +25,7 @@ for documents in retreive:
 
 
 @app.route('/')
+@app.route('/home')
 def home():
     return render_template('Oneth_homePage.html')
 
@@ -42,7 +43,7 @@ def careerSurvey():
 
 @app.route('/programSurvey')
 def programSurvey():
-    return render_template('Oneth_programFinder.html')
+    return render_template('programFinder.html')
 
 @app.route('/universityFinder')
 def universityFinder():

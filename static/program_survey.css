@@ -4,12 +4,20 @@ body{
 }
 h1 {
   font-family: 'Gloock', serif;
-  font-weight: 900;
+  /* font-weight: 900; */
   font-size: 3.5rem;
   line-height: 1.5;
   text-align: center;
+  background-color: blue;
+  padding-bottom: 30px;
 }
-
+h4{
+  font-family: 'Gloock', serif;
+  /* font-weight: 900; */
+  /* font-size: 3.5rem; */
+  line-height: 1.5;
+  text-align: center;
+}
 hr {
   border: dotted #EEEEEE 6px;
   border-bottom: none;
@@ -68,5 +76,5 @@ div label{
   margin : 20px 40px 30px 47%;
   background-color: rgb(239, 55, 55);
   border-radius: 6px;
-  
+
 }
