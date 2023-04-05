@@ -42,7 +42,11 @@ def careerSurvey():
 
 @app.route('/programSurvey')
 def programSurvey():
-    return render_template('Oneth_careerFinderSurvey.html')
+    return render_template('Oneth_programFinder.html')
+
+@app.route('/universityFinder')
+def universityFinder():
+    return render_template('Oneth_universityFinder.html')
 
 # Showing data to the web page
 @app.route("/career")
