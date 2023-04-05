@@ -39,7 +39,7 @@ h1 {
 }
 
 #title {
-  background-color: #5BC0F8;
+  background-color: blue;
   color: white;
 }
 
@@ -75,7 +75,7 @@ h1 {
 
 #testimonials {
   text-align: center;
-  background-color: #5BC0F8;
+  background-color: blue;
   color: white;
 }
 
@@ -139,4 +139,17 @@ h1 {
 
 .social-icon{
   margin: 20px 10px;
+}
+
+.card-header{
+  background-color: #5050de;
+  color: white;
+}
+
+.card{
+  border: 2px solid #5050de;
+}
+
+.nav-link:hover{
+  color: black;
 }
