@@ -24,6 +24,10 @@ for documents in retreive:
     career_list.append(documents)
 
 
+@app.route('/')
+def home():
+    return render_template('Oneth_homePage.html')
+
 # Showing data to the web page
 @app.route("/career")
 def career():
@@ -47,7 +51,6 @@ def signup():
     }
     collection_Signup.insert_one(user)
     return render_template("Nirusan_OptionPage.html")
-
 
 # 127.0.0.1 is the local machines IP address
 # 5000 port is for TCP
