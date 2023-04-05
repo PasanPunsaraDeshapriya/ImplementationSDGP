@@ -1,3 +1,4 @@
+var newNumber;
 console.log("file is working");
 $(document).ready(function() {
   $("#submit").click(function() {
@@ -243,7 +244,7 @@ $(document).ready(function() {
 
       // Print the highest three numbers
       console.log("The highest three numbers are: " + numbers[0][0] + " " + numbers[0][1] + " , " + numbers[1][0] + " " + numbers[1][1] + " , " + numbers[2][0] + " " + numbers[2][1]);
-      var newNumber = numbers[0][1]+numbers[1][1]+numbers[2][1];
+      newNumber = numbers[0][1]+numbers[1][1]+numbers[2][1];
       console.log(newNumber);
       // fetch('http://localhost:8000/dataset.csv')
       //   .then(response => response.text())
@@ -259,3 +260,20 @@ $(document).ready(function() {
     }
   });
 })
+
+$(document).ready(function() {
+  $("#submit").click(function() {
+      var myData = newNumber;
+
+      $.ajax({
+          type: "POST",
+          url: "/my-python-endpoint",
+          data: JSON.stringify(myData),
+          success: function(response) {
+              console.log("Data sent to Python:", response);
+          },
+          contentType: "application/json",
+          dataType: "json"
+      });
+  });
+});

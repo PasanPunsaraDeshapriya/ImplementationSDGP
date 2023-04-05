@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template, request
+from flask import render_template, request, redirect, url_for
 from pymongo import *
 import csv
 
@@ -20,6 +20,7 @@ collection_Signup = database["signUp"]
 
 retreive = collection.find()
 career_list = []
+interest_code_list = []
 for documents in retreive:
     career_list.append(documents)
 
@@ -29,31 +30,25 @@ for documents in retreive:
 def home():
     return render_template('Oneth_homePage.html')
 
+
 @app.route('/careerFinder')
 def careerFinder():
     return render_template('Oneth_careerFinder.html')
+
 
 @app.route('/careerFinderModel')
 def careerFinderModel():
     return render_template('Oneth_careerFinderModel.html')
 
+
 @app.route('/careerSurvey')
 def careerSurvey():
     return render_template('Oneth_careerFinderSurvey.html')
 
-@app.route('/programSurvey')
-def programSurvey():
-    return render_template('programFinder.html')
 
 @app.route('/universityFinder')
 def universityFinder():
     return render_template('Oneth_universityFinder.html')
-
-# Showing data to the web page
-@app.route("/career")
-def career():
-    return render_template('Nirusan_CareerDisplay.html', career_list=career_list)
-
 
 @app.route('/signup', methods=['GET'])
 def signup_form():
@@ -73,9 +68,37 @@ def signup():
     collection_Signup.insert_one(user)
     return render_template("Nirusan_OptionPage.html")
 
+
 @app.route('/login')
 def login():
     return render_template('Nirusan_Login.html')
+
+
+@app.route('/programSurvey', methods=['GET'])
+def programSurvey():
+    return render_template('programFinder.html')
+
+
+@app.route("/my-python-endpoint", methods=["POST"])
+def my_python_endpoint():
+    data = request.get_json()
+    print("Data received from JavaScript:", data)
+    stringData = data.upper()
+    print(stringData)
+    for i in career_list:
+        for values in i.values():
+            if values == stringData:
+                interest_code_list.append(i)
+
+    for i in interest_code_list:
+        print(i)
+    return "success"
+
+# Showing data to the web page
+@app.route("/career")
+def career():
+    return render_template('Nirusan_CareerDisplay.html', interest_code_list= interest_code_list)
+
 # 127.0.0.1 is the local machines IP address
 # 5000 port is for TCP
 if __name__ == "__main__":

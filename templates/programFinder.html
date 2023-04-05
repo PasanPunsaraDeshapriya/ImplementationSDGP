@@ -32,7 +32,7 @@
   <form action="">
 
 
-  <form>
+  <form method="POST">
   <div class="question-section">
     <p class="questions">1. I like to work on cars</p>
 
@@ -581,8 +581,9 @@
   </div>
   
   <div id="result"></div>
+  <!-- <input type="submit" class="submitBtn" value="Check the career path"> -->
 </form>
-<button class="btn btn-outline-dark btn-lg submit-button move" id="submit">Submit</button>
+<a href="{{ url_for('career') }}"><button class="btn btn-outline-dark btn-lg submit-button move" id="submit">Submit</button></a> 
 
   <footer id="footer">
     <i class="social-icon fab fa-facebook f"></i>
