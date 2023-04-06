@@ -1,0 +1,13 @@
+Flask
+render_template
+request
+redirect
+url_for
+pandas
+seaborn
+matplotlib.pyplot
+sklearn.feature_extraction.text
+sklearn.model_selection
+sklearn.naive_bayes
+sklearn.metrics
+pickle
