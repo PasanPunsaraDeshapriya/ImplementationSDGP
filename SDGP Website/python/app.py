@@ -1,7 +1,12 @@
 from flask import Flask,render_template,request
 import pickle
-import numpy as np
+import pandas as pd
+
+from naiveBayesTest2 import tfidf
+
+
 app = Flask(__name__)
+
 
 model=pickle.load(open('my_model.pkl', 'rb'))
 @app.route('/')
@@ -31,16 +36,22 @@ def predict():
 
     # # Get input text from user
     # input_text = request.json.get('text')
-    init_features=[int(x) for x in request.form.values()]
+
 
     # Make prediction
-    tfidf = TfidfVectorizer()
-    tfidf.fit_transform(df['text'])
-    text_features = tfidf.transform([init_features])
-    predictions = mod.predict(text_features)
-    final_prediction = np.array(predictions)
-    return final_prediction.tolist()
-    return render_template('prediction.html', prediction="isk maybe is wors")
+
+    # tfidf = TfidfVectorizer()
+    # tfidf.fit_transform(df['text'])
+    # text_features = tfidf.transform([init_features])
+    # predictions = mod.predict(text_features)
+    # final_prediction = np.array(predictions)
+    # return final_prediction.tolist()
+    # return render_template('prediction.html', prediction="isk maybe is wors")
+
+    text = ['doctor']
+    text_features = tfidf.transform (text)
+    predictions = mod.predict (text_features)
+    print(predictions)
 
 
 # def post_input():

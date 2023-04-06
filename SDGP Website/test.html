@@ -5,7 +5,10 @@
 <head>
   <title>Career Pathways</title>
   <style>
-    /* CSS rules go here */
+    body {
+      background-color: #5BC0F8;
+    }
+
     #iT {
       display: none;
     }
@@ -29,6 +32,8 @@
     .hidden {
       display: block;
     }
+
+    .select {}
   </style>
 
 
@@ -51,9 +56,10 @@
   {{healthcare}}
   {{creative}}
   {{education}}
+  <button id="myButton">Click me</button>
   <script>
-    // const iT = document.getElementById('iT');
-    // iT.style.display = 'none';
+    const iT = document.getElementById('iT');
+    iT.style.display = 'none';
 
     const education = document.getElementById('education');
     education.style.display = 'none';
@@ -75,7 +81,7 @@
     submitButton.addEventListener('click', function() {
       if (selectOption.value === 'option1') {
         const marketing = document.getElementById('marketing');
-        marketing.classList.add('hidden');
+        marketing.style.display = 'block';
       }
 
       if (selectOption.value === 'option2') {
@@ -96,6 +102,46 @@
       if (selectOption.value === 'option5') {
         const creative = document.getElementById('creative');
         creative.style.display = 'block';
+      };
+    });
+    const submitButton2 = document.getElementById('myButton');
+
+    submitButton2.addEventListener('click', function() {
+      const iT = document.getElementById('iT');
+
+      if (iT.style.display === 'block') {
+        iT.classList.add('select');
+      }
+
+      const education = document.getElementById('education');
+
+      if (education.style.display === 'block') {
+        education.classList.add('select');
+      }
+
+      const healthcare = document.getElementById('healthcare');
+
+      if (healthcare.style.display === 'block') {
+        healthcare.classList.add('select');
+      }
+
+      const creative = document.getElementById('creative');
+
+      if (creative.style.display === 'block') {
+        creative.classList.add('select');
+      }
+
+      const marketing = document.getElementById('marketing');
+
+      if (marketing.style.display === 'block') {
+        marketing.classList.add('select');
+      }
+
+      const selectElement = document.getElementById('iT'); // Replace 'mySelect' with the ID of your select element
+
+      if (selectElement.classList.contains('select')) { // Check if the select element has the 'select' class
+        const selectedOption = selectElement.value; // Get the value of the selected option
+        console.log(selectedOption); // Log the selected option to the console
       }
     });
   </script>

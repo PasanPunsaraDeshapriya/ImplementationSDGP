@@ -45,31 +45,31 @@ const server = http.createServer(function(req, res) {
           // Generate the select element HTML using the career pathways
           let selectiT = '<select id="iT">';
           for (let i = 0; i < 50; i++) {
-            selectiT += `<option value="${i}">${iT[i]}</option>`;
+            selectiT += `<option value="${iT[i]}">${iT[i]}</option>`;
           }
           selectiT += '</select>';
 
           let selectEducation = '<select id="education">';
           for (let i = 0; i < 50; i++) {
-            selectEducation += `<option value="${i}">${education[i]}</option>`;
+            selectEducation += `<option value="${education[i]}">${education[i]}</option>`;
           }
           selectEducation += '</select>';
 
           let selectMarketing = '<select id="marketing">';
           for (let i = 0; i < 50; i++) {
-            selectMarketing += `<option value="${i}">${marketing[i]}</option>`;
+            selectMarketing += `<option value="${marketing[i]}">${marketing[i]}</option>`;
           }
           selectMarketing += '</select>';
 
           let selectCreative = '<select id="creative">';
           for (let i = 0; i < 50; i++) {
-            selectCreative += `<option value="${i}">${creative[i]}</option>`;
+            selectCreative += `<option value="${creative[i]}">${creative[i]}</option>`;
           }
           selectCreative += '</select>';
 
           let selectHealthcare = '<select id="healthcare">';
           for (let i = 0; i < 50; i++) {
-            selectHealthcare += `<option value="${i}">${healthcare[i]}</option>`;
+            selectHealthcare += `<option value="${healthcare[i]}">${healthcare[i]}</option>`;
           }
           selectHealthcare += '</select>';
 
