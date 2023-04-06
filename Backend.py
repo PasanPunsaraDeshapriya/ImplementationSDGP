@@ -30,20 +30,14 @@ for documents in retreive:
 def home():
     return render_template('Oneth_homePage.html')
 
-
-@app.route('/careerFinder')
-def careerFinder():
-    return render_template('Oneth_careerFinder.html')
-
-
 @app.route('/careerFinderModel')
 def careerFinderModel():
     return render_template('Oneth_careerFinderModel.html')
 
 
-@app.route('/careerSurvey')
-def careerSurvey():
-    return render_template('Oneth_careerFinderSurvey.html')
+@app.route('/programFinder')
+def programFinder():
+    return render_template('ProgramFinder.html')
 
 
 @app.route('/universityFinder')
@@ -74,9 +68,9 @@ def login():
     return render_template('Nirusan_Login.html')
 
 
-@app.route('/programSurvey', methods=['GET'])
-def programSurvey():
-    return render_template('programFinder.html')
+@app.route('/careerFinder', methods=['GET'])
+def careerFinder():
+    return render_template('CareerFinder.html')
 
 
 @app.route("/my-python-endpoint", methods=["POST"])

@@ -23,35 +23,42 @@
 </head>
 
 <body>
-  <h1>Career Finder</h1>
-  <h4>Read each statement. If you agree with the statement, fill in the circle. There are no wrong answers!</h4>
-  
+  <h1>
+    <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo2.png') }}" 
+        style="width: 200px; border-radius: 30px; float: left; margin-top: 20px" alt="iit-logo"></a>
+    <span style="position: relative; right: 100px; top: 10px;">Career Finder</span> 
+</h1>
+  <h4>Read each statement. If you agree with the statement, fill in the circle. <span style="color: black; text-shadow: 0.5px 0.5px 0.5px red;"> There are no wrong answers! </span></h4>
   <form action="">
+
+
+  <form method="POST">
   <div class="question-section">
     <p class="questions">1. I like to work on cars</p>
 
     <div>
       <label>
-        <input type="radio" name="q1" value="yes">Yes I Do
+        <input type="radio"  name="q1" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q1" value="no">No I Don't
+        <input type="radio"  name="q1" value="no">No I Don't
       </label>
     </div>
-    
+
+
     <hr class="separator separator--dots" />
 
     <p class="questions">2. I like to do puzzles</p>
     <div>
       <label>
-        <input type="radio" name="q2" value="yes">Yes I Do
+        <input type="radio"  name="q2" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q2" value="no">No I Don't
+        <input type="radio"  name="q2" value="no">No I Don't
       </label>
     </div>
 
@@ -60,12 +67,12 @@
     <p class="questions">3. I am good at working independently</p>
     <div>
       <label>
-        <input type="radio" name="q3" value="yes">Yes I am
+        <input type="radio"  name="q3" value="yes">Yes I am
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q3" value="no">No I'm Not
+        <input type="radio"  name="q3" value="no">No I'm Not
       </label>
     </div>
 
@@ -73,12 +80,12 @@
     <p class="questions">4. I like to work in teams</p>
     <div>
       <label>
-        <input type="radio" name="q4" value="yes">Yes I Do
+        <input type="radio"  name="q4" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q4" value="no">No I Don't
+        <input type="radio"  name="q4" value="no">No I Don't
       </label>
     </div>
 
@@ -86,12 +93,12 @@
     <p class="questions">5. I am an ambitious person, I set goals for myself</p>
     <div>
       <label>
-        <input type="radio" name="q5" value="yes">Yes I Do
+        <input type="radio"  name="q5" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q5" value="no">No I Don't
+        <input type="radio"  name="q5" value="no">No I Don't
       </label>
     </div>
 
@@ -99,12 +106,12 @@
     <p class="questions">6. I like to organize things,(files, desks/offices)</p>
     <div>
       <label>
-        <input type="radio" name="q6" value="yes">Yes I Do
+        <input type="radio"  name="q6" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q6" value="no">No I Don't
+        <input type="radio"  name="q6" value="no">No I Don't
       </label>
     </div>
 
@@ -112,12 +119,12 @@
     <p class="questions">7. I like to build things</p>
     <div>
       <label>
-        <input type="radio" name="q7" value="yes">Yes I Do
+        <input type="radio"  name="q7" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q7" value="no">No I Don't
+        <input type="radio"  name="q7" value="no">No I Don't
       </label>
     </div>
 
@@ -125,12 +132,12 @@
     <p class="questions">8. I like to read about art and music</p>
     <div>
       <label>
-        <input type="radio" name="q8" value="yes">Yes I Do
+        <input type="radio"  name="q8" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q8" value="no">No I Don't
+        <input type="radio"  name="q8" value="no">No I Don't
       </label>
     </div>
 
@@ -138,12 +145,12 @@
     <p class="questions">9. I like to have clear instructions to follow</p>
     <div>
       <label>
-        <input type="radio" name="q9" value="yes">Yes I Do
+        <input type="radio"  name="q9" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q9" value="no">No I Don't
+        <input type="radio"  name="q9" value="no">No I Don't
       </label>
     </div>
 
@@ -151,12 +158,12 @@
     <p class="questions">10. I like to try to influence or persuade people</p>
     <div>
       <label>
-        <input type="radio" name="q10" value="yes">Yes I Do
+        <input type="radio"  name="q10" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q10" value="no">No I Don't
+        <input type="radio"  name="q10" value="no">No I Don't
       </label>
     </div>
 
@@ -164,12 +171,12 @@
     <p class="questions">11. I like to do experiment</p>
     <div>
       <label>
-        <input type="radio" name="q11" value="yes">Yes I Do
+        <input type="radio"  name="q11" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q11" value="no">No I Don't
+        <input type="radio"  name="q11" value="no">No I Don't
       </label>
     </div>
 
@@ -177,12 +184,12 @@
     <p class="questions">12. I like to teach or train people</p>
     <div>
       <label>
-        <input type="radio" name="q12" value="yes">Yes I Do
+        <input type="radio"  name="q12" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q12" value="no">No I Don't
+        <input type="radio"  name="q12" value="no">No I Don't
       </label>
     </div>
 
@@ -190,12 +197,12 @@
     <p class="questions">13. I like trying to help people solve their problems</p>
     <div>
       <label>
-        <input type="radio" name="q13" value="yes">Yes I Do
+        <input type="radio"  name="q13" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q13" value="no">No I Don't
+        <input type="radio"  name="q13" value="no">No I Don't
       </label>
     </div>
 
@@ -203,12 +210,12 @@
     <p class="questions">14. I like to take care of animals</p>
     <div>
       <label>
-        <input type="radio" name="q14" value="yes">Yes I Do
+        <input type="radio"  name="q14" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q14" value="no">No I Don't
+        <input type="radio"  name="q14" value="no">No I Don't
       </label>
     </div>
 
@@ -216,12 +223,12 @@
     <p class="questions">15. I wouldn’t mind working 8 hours per day in an office</p>
     <div>
       <label>
-        <input type="radio" name="q15" value="yes">Yes I wouldn't Mind
+        <input type="radio"  name="q15" value="yes">Yes I wouldn't Mind
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q15" value="no">No I would Mind
+        <input type="radio"  name="q15" value="no">No I would Mind
       </label>
     </div>
 
@@ -229,12 +236,12 @@
     <p class="questions">16. I like selling things</p>
     <div>
       <label>
-        <input type="radio" name="q16" value="yes">Yes I Do
+        <input type="radio"  name="q16" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q16" value="no">No I Don't
+        <input type="radio"  name="q16" value="no">No I Don't
       </label>
     </div>
 
@@ -242,12 +249,12 @@
     <p class="questions">17. I enjoy creative writing</p>
     <div>
       <label>
-        <input type="radio" name="q17" value="yes">Yes I Do
+        <input type="radio"  name="q17" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q17" value="no">No I Don't
+        <input type="radio"  name="q17" value="no">No I Don't
       </label>
     </div>
 
@@ -255,12 +262,12 @@
     <p class="questions">18. I enjoy science</p>
     <div>
       <label>
-        <input type="radio" name="q18" value="yes">Yes I Do
+        <input type="radio"  name="q18" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q18" value="no">No I Don't
+        <input type="radio"  name="q18" value="no">No I Don't
       </label>
     </div>
 
@@ -268,12 +275,12 @@
     <p class="questions">19. I am quick to take on new responsibilities</p>
     <div>
       <label>
-        <input type="radio" name="q19" value="yes">Yes I Do
+        <input type="radio"  name="q19" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q19" value="no">No I Don't
+        <input type="radio"  name="q19" value="no">No I Don't
       </label>
     </div>
 
@@ -281,12 +288,12 @@
     <p class="questions">20. I am interested in healing people</p>
     <div>
       <label>
-        <input type="radio" name="q20" value="yes">Yes I Do
+        <input type="radio"  name="q20" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q20" value="no">No I Don't
+        <input type="radio"  name="q20" value="no">No I Don't
       </label>
     </div>
 
@@ -294,60 +301,60 @@
     <p class="questions">21. I enjoy trying to figure out how things work</p>
     <div>
       <label>
-        <input type="radio" name="q21" value="yes">Yes I Do
+        <input type="radio"  name="q21" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q21" value="no">No I Don't
+        <input type="radio"  name="q21" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
     <p class="questions">22.I like putting things together or assembling things</p>
     <div>
       <label>
-        <input type="radio" name="q22" value="yes">Yes I Do
+        <input type="radio"  name="q22" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q22" value="no">No I Don't
+        <input type="radio"  name="q22" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
     <p class="questions">23.I am a creative person</p>
     <div>
       <label>
-        <input type="radio" name="q23" value="yes">Yes I Do
+        <input type="radio"  name="q23" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q23" value="no">No I Don't
+        <input type="radio"  name="q23" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
     <p class="questions">24.I pay attention to details</p>
     <div>
       <label>
-        <input type="radio" name="q24" value="yes">Yes I Do
+        <input type="radio"  name="q24" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q24" value="no">No I Don't
+        <input type="radio"  name="q24" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
     <p class="questions">25.I like to do filing or typing</p>
     <div>
       <label>
-        <input type="radio" name="q25" value="yes">Yes I Do
+        <input type="radio"  name="q25" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q25" value="no">No I Don't
+        <input type="radio"  name="q25" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -355,12 +362,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q26" value="yes">Yes I Do
+        <input type="radio"  name="q26" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q26" value="no">No I Don't
+        <input type="radio"  name="q26" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -368,12 +375,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q27" value="yes">Yes I Do
+        <input type="radio"  name="q27" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q27" value="no">No I Don't
+        <input type="radio"  name="q27" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -381,12 +388,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q28" value="yes">Yes I Do
+        <input type="radio"  name="q28" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q28" value="no">No I Don't
+        <input type="radio"  name="q28" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -394,12 +401,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q29" value="yes">Yes I Do
+        <input type="radio"  name="q29" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q29" value="no">No I Don't
+        <input type="radio"  name="q29" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -407,12 +414,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q30" value="yes">Yes I Do
+        <input type="radio"  name="q30" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q30" value="no">No I Don't
+        <input type="radio"  name="q30" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -420,12 +427,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q31" value="yes">Yes I Do
+        <input type="radio"  name="q31" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q31" value="no">No I Don't
+        <input type="radio"  name="q31" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -433,12 +440,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q32" value="yes">Yes I Do
+        <input type="radio"  name="q32" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q32" value="no">No I Don't
+        <input type="radio"  name="q32" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -446,12 +453,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q33" value="yes">Yes I Do
+        <input type="radio"  name="q33" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q33" value="no">No I Don't
+        <input type="radio"  name="q33" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -459,12 +466,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q34" value="yes">Yes I Do
+        <input type="radio"  name="q34" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q34" value="no">No I Don't
+        <input type="radio"  name="q34" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -472,12 +479,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q35" value="yes">Yes I Do
+        <input type="radio"  name="q35" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q35" value="no">No I Don't
+        <input type="radio"  name="q35" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -485,12 +492,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q36" value="yes">Yes I Do
+        <input type="radio"  name="q36" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q36" value="no">No I Don't
+        <input type="radio"  name="q36" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -498,12 +505,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q37" value="yes">Yes I Do
+        <input type="radio"  name="q37" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q37" value="no">No I Don't
+        <input type="radio"  name="q37" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -511,12 +518,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q38" value="yes">Yes I Do
+        <input type="radio"  name="q38" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q38" value="no">No I Don't
+        <input type="radio"  name="q38" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -524,12 +531,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q39" value="yes">Yes I Do
+        <input type="radio"  name="q39" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q39" value="no">No I Don't
+        <input type="radio"  name="q39" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -537,12 +544,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q40" value="yes">Yes I Do
+        <input type="radio"  name="q40" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q40" value="no">No I Don't
+        <input type="radio"  name="q40" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -550,12 +557,12 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q41" value="yes">Yes I Do
+        <input type="radio"  name="q41" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q41" value="no">No I Don't
+        <input type="radio"  name="q41" value="no">No I Don't
       </label>
     </div>
     <hr class="separator separator--dots" />
@@ -563,20 +570,20 @@
     </p>
     <div>
       <label>
-        <input type="radio" name="q42" value="yes">Yes I Do
+        <input type="radio"  name="q42" value="yes">Yes I Do
       </label>
     </div>
     <div>
       <label>
-        <input type="radio" name="q42" value="no">No I Don't
+        <input type="radio"  name="q42" value="no">No I Don't
       </label>
     </div>
   </div>
-  <button class="btn btn-outline-dark btn-lg submit-button" id="submit">Submit</button>
+  
   <div id="result"></div>
-  </form>
-
-
+  <!-- <input type="submit" class="submitBtn" value="Check the career path"> -->
+</form>
+<a href="{{ url_for('career') }}"><button class="btn btn-outline-dark btn-lg submit-button move" id="submit">Submit</button></a> 
 
   <footer id="footer">
     <i class="social-icon fab fa-facebook f"></i>
@@ -587,7 +594,7 @@
 
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="JavaScript/program.js"></script>
+  <script src="{{ url_for('static', filename='js/program.js') }}"></script>
 </body>
 
 </html>
