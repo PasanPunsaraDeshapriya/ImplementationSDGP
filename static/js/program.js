@@ -262,12 +262,12 @@ $(document).ready(function() {
 })
 
 $(document).ready(function() {
-  $("#submit").click(function() {
+  $("#submit2").click(function() {
       var myData = newNumber;
 
       $.ajax({
           type: "POST",
-          url: "/my-python-endpoint",
+          url: "/my-python-endpoint2",
           data: JSON.stringify(myData),
           success: function(response) {
               console.log("Data sent to Python:", response);

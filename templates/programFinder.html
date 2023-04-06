@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <h1>Career Finder</h1>
+  <h1>Program Finder</h1>
   <h4>Read each statement. If you agree with the statement, fill in the circle. There are no wrong answers!</h4>
   
   <form action="">
@@ -572,7 +572,7 @@
       </label>
     </div>
   </div>
-  <button class="btn btn-outline-dark btn-lg submit-button" id="submit">Submit</button>
+  <button class="btn btn-outline-dark btn-lg submit-button" id="submit2">Submit</button>
   <div id="result"></div>
   </form>
 
@@ -587,7 +587,7 @@
 
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="JavaScript/program.js"></script>
+  <script src="{{ url_for('static', filename='js/program.js') }}></script>
 </body>
 
 </html>

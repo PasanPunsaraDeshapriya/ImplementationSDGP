@@ -20,7 +20,8 @@ collection_Signup = database["signUp"]
 
 retreive = collection.find()
 career_list = []
-interest_code_list = []
+interest_code_career = []
+interest_code_program = []
 for documents in retreive:
     career_list.append(documents)
 
@@ -33,12 +34,6 @@ def home():
 @app.route('/careerFinderModel')
 def careerFinderModel():
     return render_template('Oneth_careerFinderModel.html')
-
-
-@app.route('/programFinder')
-def programFinder():
-    return render_template('ProgramFinder.html')
-
 
 @app.route('/universityFinder')
 def universityFinder():
@@ -82,16 +77,41 @@ def my_python_endpoint():
     for i in career_list:
         for values in i.values():
             if values == stringData:
-                interest_code_list.append(i)
+                interest_code_career.append(i)
 
-    for i in interest_code_list:
-        print(i)
+    for i in interest_code_career:
+        print(i, " for career")
+    return "success"
+
+@app.route('/programFinder', methods=['GET'])
+def programFinder():
+    return render_template('ProgramFinder.html')
+
+
+@app.route("/my-python-endpoint2", methods=["POST"])
+def my_python_endpoint2():
+    data = request.get_json()
+    print("Data received from JavaScript:", data)
+    stringData = data.upper()
+    print(stringData)
+    for i in career_list:
+        for values in i.values():
+            if values == stringData:
+                interest_code_program.append(i)
+
+    for i in interest_code_program:
+        print(i, " for program")
     return "success"
 
 # Showing data to the web page
 @app.route("/career")
 def career():
-    return render_template('Nirusan_CareerDisplay.html', interest_code_list= interest_code_list)
+    return render_template('Nirusan_CareerDisplay.html', interest_code_career = interest_code_career)
+
+# Showing data to the web page
+@app.route("/program")
+def program():
+    return render_template('programShow.html', interest_code_program = interest_code_program)
 
 # 127.0.0.1 is the local machines IP address
 # 5000 port is for TCP
