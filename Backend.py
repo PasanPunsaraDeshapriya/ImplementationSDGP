@@ -20,18 +20,22 @@ collection_university = database["university"]
 #             data[header[i]] = row[i]
 #         collection.insert_one(data)
 
+# Collection files
 retrieve_career = collection.find()
 retrieve_program = collection_program.find();
 retrieve_university = collection_university.find();
 
+# Whole list contains the mongo data
 career_list = []
 program_list = []
 university_list = []
 
+# Required list
 interest_code_career = []
 interest_code_program = []
 interest_code_university = []
 
+# Appending the whole list
 for documents in retrieve_career:
     career_list.append(documents)
 
@@ -41,24 +45,33 @@ for documents in retrieve_program:
 for documents in retrieve_university:
     university_list.append(documents)
 
+
+# Route for the home page
 @app.route('/')
 @app.route('/home')
 def home():
     return render_template('Oneth_homePage.html')
 
+
+# Route for the career finder model
 @app.route('/careerFinderModel')
 def careerFinderModel():
     return render_template('Oneth_careerFinderModel.html')
 
+
+# Route for the university finder page
 @app.route('/universityFinder')
 def universityFinder():
     return render_template('Oneth_universityFinder.html')
 
+
+# Route for the sign up page
 @app.route('/signup', methods=['GET'])
 def signup_form():
     return render_template('Nirusan_SignUp.html')
 
 
+# sign up page and mongo connecting
 @app.route('/signup', methods=['POST'])
 def signup():
     name = request.form['name']
@@ -73,11 +86,14 @@ def signup():
     return render_template("Nirusan_OptionPage.html")
 
 
-@app.route('/login', methods = ['GET'])
+# Route for the login page
+@app.route('/login', methods=['GET'])
 def login():
     return render_template('Nirusan_Login.html')
 
-@app.route('/login', methods = ['POST'])
+
+# login page and mongo connecting
+@app.route('/login', methods=['POST'])
 def loginForm():
     # Get login data from form submission
     email = request.form['email']
@@ -87,7 +103,7 @@ def loginForm():
     query = {"email": email, "password": password}
     document = collection_Signup.find_one(query)
     exists = document is not None
-    
+
     if exists:
         print("Account already exits")
     else:
@@ -95,15 +111,20 @@ def loginForm():
 
     return render_template("/Nirusan_OptionPage.html")
 
+
+# Route for the careerfinder page
 @app.route('/careerFinder', methods=['GET'])
 def careerFinder():
     return render_template('CareerFinder.html')
 
+
+# Route for the program finder page
 @app.route('/programFinder', methods=['GET'])
 def programFinder():
     return render_template('ProgramFinder.html')
 
 
+# sorting user's career appending on requried list
 @app.route("/my-python-endpoint", methods=["POST"])
 def my_python_endpoint():
     data = request.get_json()
@@ -119,6 +140,8 @@ def my_python_endpoint():
         print(i, " for career")
     return "success"
 
+
+# Sorting the user's programs and appending on required list
 @app.route("/my-python-endpoint2", methods=["POST"])
 def my_python_endpoint2():
     data = request.get_json()
@@ -134,17 +157,21 @@ def my_python_endpoint2():
         print(i, " for program")
     return "success"
 
+
 # Showing data to the web page
 @app.route("/career")
 def career():
-    return render_template('Nirusan_CareerDisplay.html', interest_code_career = interest_code_career)
+    return render_template('Nirusan_CareerDisplay.html', interest_code_career=interest_code_career)
+
 
 # Showing data to the web page
 @app.route("/program")
 def program():
-    return render_template('programShow.html', interest_code_program = interest_code_program)
+    return render_template('programShow.html', interest_code_program=interest_code_program)
+
 
 # 127.0.0.1 is the local machines IP address
 # 5000 port is for TCP
+# Running the server on debugging version
 if __name__ == "__main__":
     app.run(debug=True)
