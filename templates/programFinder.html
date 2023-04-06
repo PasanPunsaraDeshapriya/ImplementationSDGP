@@ -572,11 +572,9 @@
       </label>
     </div>
   </div>
-  <button class="btn btn-outline-dark btn-lg submit-button" id="submit2">Submit</button>
-  <div id="result"></div>
+  <div id="result2"></div>
   </form>
-
-
+  <a href="{{ url_for('program') }}"><button class="btn btn-outline-dark btn-lg submit-button" id="submit2">Submit</button></a>
 
   <footer id="footer">
     <i class="social-icon fab fa-facebook f"></i>
@@ -587,7 +585,7 @@
 
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="{{ url_for('static', filename='js/program.js') }}></script>
+  <script src="{{ url_for('static', filename='js/program.js') }}"></script>
 </body>
 
 </html>

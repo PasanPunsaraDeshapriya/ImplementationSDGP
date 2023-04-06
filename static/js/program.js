@@ -1,7 +1,7 @@
 var newNumber;
 console.log("file is working");
 $(document).ready(function() {
-  $("#submit").click(function() {
+  $("#submit2").click(function() {
     var r = 0;
     var i = 0;
     var a = 0;
@@ -97,7 +97,7 @@ $(document).ready(function() {
 
     // Check if both questions are answered
     if (q1 === undefined || q2 === undefined || q3 === undefined) {
-      $("#result").text("Please answer answer all questions.");
+      $("#result2").text("Please answer answer all questions.");
     } else {
       // Check the answers
       var correct = 0;
@@ -256,7 +256,7 @@ $(document).ready(function() {
       //   .catch(error => console.error(error));
 
       // Display the result
-      $("#result").text("the pathway number you got is " + newNumber);
+      $("#result2").text("the pathway number you got is " + newNumber);
     }
   });
 })

@@ -9,6 +9,8 @@ cluster = MongoClient("mongodb+srv://CS3:OS18@cluster0.a6pcbds.mongodb.net/?retr
 database = cluster["Sdgp_Test"]
 collection = database["career"]
 collection_Signup = database["signUp"]
+collection_program = database["program"]
+collection_university = database["university"]
 # with open("Data_Files/Enterprising.csv", "r") as file:
 #     reader = csv.reader(file)
 #     header = next(reader)
@@ -18,13 +20,26 @@ collection_Signup = database["signUp"]
 #             data[header[i]] = row[i]
 #         collection.insert_one(data)
 
-retreive = collection.find()
+retrieve_career = collection.find()
+retrieve_program = collection_program.find();
+retrieve_university = collection_university.find();
+
 career_list = []
+program_list = []
+university_list = []
+
 interest_code_career = []
 interest_code_program = []
-for documents in retreive:
+interest_code_university = []
+
+for documents in retrieve_career:
     career_list.append(documents)
 
+for documents in retrieve_program:
+    program_list.append(documents)
+
+for documents in retrieve_university:
+    university_list.append(documents)
 
 @app.route('/')
 @app.route('/home')
@@ -58,14 +73,32 @@ def signup():
     return render_template("Nirusan_OptionPage.html")
 
 
-@app.route('/login')
+@app.route('/login', methods = ['GET'])
 def login():
     return render_template('Nirusan_Login.html')
 
+@app.route('/login', methods = ['POST'])
+def loginForm():
+    email =  request.form['email']
+    password = request.form['password']
+    querry = {"email" : email, "password" : password}
+    verify = collection_Signup.find_one(querry)
+    exists = verify is not None
+    
+    if exists:
+        print ("account is already there")
+    else:
+        print ("account is not there")
+    
+    return render_template("/Oneth_homePage.html")
 
 @app.route('/careerFinder', methods=['GET'])
 def careerFinder():
     return render_template('CareerFinder.html')
+
+@app.route('/programFinder', methods=['GET'])
+def programFinder():
+    return render_template('ProgramFinder.html')
 
 
 @app.route("/my-python-endpoint", methods=["POST"])
@@ -83,18 +116,13 @@ def my_python_endpoint():
         print(i, " for career")
     return "success"
 
-@app.route('/programFinder', methods=['GET'])
-def programFinder():
-    return render_template('ProgramFinder.html')
-
-
 @app.route("/my-python-endpoint2", methods=["POST"])
 def my_python_endpoint2():
     data = request.get_json()
     print("Data received from JavaScript:", data)
     stringData = data.upper()
     print(stringData)
-    for i in career_list:
+    for i in program_list:
         for values in i.values():
             if values == stringData:
                 interest_code_program.append(i)
