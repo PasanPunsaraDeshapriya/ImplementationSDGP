@@ -79,18 +79,21 @@ def login():
 
 @app.route('/login', methods = ['POST'])
 def loginForm():
-    email =  request.form['email']
+    # Get login data from form submission
+    email = request.form['email']
     password = request.form['password']
-    querry = {"email" : email, "password" : password}
-    verify = collection_Signup.find_one(querry)
-    exists = verify is not None
+
+    # Check if login data exists in MongoDB
+    query = {"email": email, "password": password}
+    document = collection_Signup.find_one(query)
+    exists = document is not None
     
     if exists:
-        print ("account is already there")
+        print("Account already exits")
     else:
-        print ("account is not there")
-    
-    return render_template("/Oneth_homePage.html")
+        print("Account not exits")
+
+    return render_template("/Nirusan_OptionPage.html")
 
 @app.route('/careerFinder', methods=['GET'])
 def careerFinder():

@@ -25,7 +25,13 @@
 </head>
 
 <body>
-  <h1>University Finder</h1>
+  <h1>
+    <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo2.png') }}" 
+        style="width: 200px; border-radius: 30px; float: left; margin-top: 20px" alt="iit-logo"></a>
+    <span style="position: relative; right: 100px; top: 10px;">University Finder </span> 
+  </h1>
+  <h4>Read each statement. If you agree with the statement, fill in the circle. There are no wrong answers!</h4>
+
   <div class="question-section">
     <p class="questions"> 1. What kind of program are you looking for ?</p>
 
