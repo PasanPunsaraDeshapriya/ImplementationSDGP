@@ -11,6 +11,8 @@ collection = database["career"]
 collection_Signup = database["signUp"]
 collection_program = database["program"]
 collection_university = database["university"]
+
+# Code to extract the data from csv and inserting to the collection
 # with open("Data_Files/Enterprising.csv", "r") as file:
 #     reader = csv.reader(file)
 #     header = next(reader)
