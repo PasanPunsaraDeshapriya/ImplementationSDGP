@@ -14,9 +14,18 @@
     {% else %}
       <title>Flask Blog</title>
     {% endif %}
+
+    <style>
+      table{height: 200px;}
+    </style>
 </head>
 
 <body>
+  <h1>
+    <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo2.png') }}" 
+        style="width: 150px; border-radius: 30px; float: left; margin-top: 10px; margin-left: 10px;"  alt="iit-logo"></a>
+    <span style="position: relative; right: 100px; top: 10px;">Results</span> 
+  </h1>
 
     <!-- Creating a for loop and sharing information which in the python dictonary to html -->
     <table>
@@ -24,15 +33,12 @@
         <th>Interest Code</th>
         <th>Job Zone</th>
         <th>Occupation</th>
-        <th>Feature</th>
       </tr>
     {% for post in interest_code_career %}
           <tr>
             <td>{{post.Interest_Code}}</td>
             <td>{{post.Job_Zone}}</td>
-            <td>{{post.Code}}</td>
             <td>{{post.Occupation}}</td>
-            <td>{{post.Featured}}</td>
           </tr>
     {% endfor %}
   </table>
