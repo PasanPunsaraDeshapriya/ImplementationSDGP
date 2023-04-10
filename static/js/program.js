@@ -228,7 +228,7 @@ $(document).ready(function() {
         c++;
       }
 
-      let numbers = [
+      const arr = [
         [r, "r"],
         [i, "i"],
         [a, "a"],
@@ -238,13 +238,19 @@ $(document).ready(function() {
       ];
 
       // Sort the array in descending order
-      numbers.sort(function(a, b) {
-        return b[1] - a[1];
+      arr.sort((a, b) => {
+        if (a[0] < b[0]) {
+          return 1;
+        } else if (a[0] > b[0]) {
+          return -1;
+        } else {
+          return 0;
+        }
       });
 
       // Print the highest three numbers
-      console.log("The highest three numbers are: " + numbers[0][0] + " " + numbers[0][1] + " , " + numbers[1][0] + " " + numbers[1][1] + " , " + numbers[2][0] + " " + numbers[2][1]);
-      newNumber = numbers[0][1]+numbers[1][1]+numbers[2][1];
+      newNumber = arr[0][1] + arr[1][1] + arr[2][1];
+      // Print the sorted array
       console.log(newNumber);
       // fetch('http://localhost:8000/dataset.csv')
       //   .then(response => response.text())
