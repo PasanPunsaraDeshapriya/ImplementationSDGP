@@ -1,36 +1,29 @@
-// $(function() {
-//   $('.selectpicker').selectpicker();
-// });
+const selectElement = document.getElementById("provinces");
+const selectedValue = selectElement.value;
+console.log(selectedValue)
 
-const {MongoClient} = require('mongodb');
+const element1 = document.getElementById("foreign");
+const selectedValue1 = element1.value;
+console.log(selectedValue1)
 
-async function main(){
-    /**
-     * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-     * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-     */
-const uri = "mongodb+srv://ONETH:ONETH@cluster0.ctwl4hm.mongodb.net/?retryWrites=true&w=majority";
+$(document).ready(function() {
+  $("input[name='size']").change(function() {
+    const selectedValue = $("input[name='size']:checked").val();
+    console.log(selectedValue);
+  });
+});
 
-const client = new MongoClient(uri);
+$(document).ready(function() {
+  $("input[name='program']").change(function() {
+    const selectedValue = $("input[name='program']:checked").val();
+    console.log(selectedValue);
+  });
+});
 
-    try {
-        // Connect to the MongoDB cluster
-        await client.connect();
 
-        // Make the appropriate DB calls
-        await  listDatabases(client);
-
-    } catch (e) {
-        console.error(e);
-    } finally {
-        await client.close();
-    }
-}
-
-main().catch(console.error);
-async function listDatabases(client){
-    databasesList = await client.db().admin().listDatabases();
-
-    console.log("Databases:");
-    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-};
+$(document).ready(function() {
+  $("input[name='budget']").change(function() {
+    const selectedValue = $("input[name='budget']:checked").val();
+    console.log(selectedValue);
+  });
+});

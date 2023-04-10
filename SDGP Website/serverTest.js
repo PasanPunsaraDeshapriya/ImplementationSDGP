@@ -8,13 +8,14 @@ const port = 3000;
 
 // Serve the index.html file
 app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/careerFinderModel.html');
+  res.sendFile(__dirname + '/test.html');
 });
 //
 // Handle POST requests to the /predict endpoint
 app.post('/', function(req, res) {
   // Parse the input data from the request body
   var inputData = req.body.oneth;
+  console.log(inputData);
 
   // Set up the Python shell options
   var options = {

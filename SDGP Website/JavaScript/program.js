@@ -225,33 +225,32 @@ $(document).ready(function() {
       if (q42 === "yes") {
         c++;
       }
+      console.log(r, i, a, s, e, c);
 
-      let numbers = [
-        [r, "r"],
-        [i, "i"],
-        [a, "a"],
-        [s, "s"],
-        [e, "e"],
+
+      const arr = [
+        [r, 'r'],
+        [i, 'i'],
+        [a, 'a'],
+        [s, 's'],
+        [e, 'e'],
         [c, "c"]
       ];
 
-      // Sort the array in descending order
-      numbers.sort(function(a, b) {
-        return b[1] - a[1];
+      // Sort the array based on the first value in each sub-array
+      arr.sort((a, b) => {
+        if (a[0] < b[0]) {
+          return 1;
+        } else if (a[0] > b[0]) {
+          return -1;
+        } else {
+          return 0;
+        }
       });
-
-      // Print the highest three numbers
-      console.log("The highest three numbers are: " + numbers[0][0] + " " + numbers[0][1] + " , " + numbers[1][0] + " " + numbers[1][1] + " , " + numbers[2][0] + " " + numbers[2][1]);
-      var newNumber = numbers[0][1]+numbers[1][1]+numbers[2][1];
+      var newNumber = arr[0][1] + arr[1][1] + arr[2][1];
+      // Print the sorted array
       console.log(newNumber);
-      // fetch('http://localhost:8000/dataset.csv')
-      //   .then(response => response.text())
-      //   .then(data => {
-      //     // Parse the CSV data
-      //     const rows = data.split('\n').map(row => row.split(','));
-      //     console.log(rows);
-      //   })
-      //   .catch(error => console.error(error));
+
 
       // Display the result
       $("#result").text("the pathway number you got is " + newNumber);

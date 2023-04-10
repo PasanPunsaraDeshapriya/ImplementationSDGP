@@ -3,60 +3,67 @@
 <html>
 
 <head>
-  <title>Career Pathways</title>
+  <title>Career Pathways Predcitor</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style>
     body {
       background-color: #5BC0F8;
     }
 
-    #iT {
-      display: none;
+    #select1 {
+      margin: 10px;
     }
 
-    #education {
+    #iT,
+    #education,
+    #marketing,
+    #healthcare,
+    #creative,
+    #myButton {
       display: none;
+      margin: 10px;
     }
 
-    #marketing {
-      display: none;
-    }
-
-    #healthcare {
-      display: none;
-    }
-
-    #creative {
-      display: none;
-    }
 
     .hidden {
       display: block;
     }
 
     .select {}
+
+    .div-box {
+      padding: 30px;
+    }
   </style>
 
 
 </head>
 
 <body>
-  <h1>Career Pathways</h1>
-  <select id="select1">
-    <option value="">-- Select an option --</option>
-    <option value="option1">Marketing</option>
-    <option value="option2">Healthcare</option>
-    <option value="option3">education</option>
-    <option value="option4">Information Technology</option>
-    <option value="option5">Creative arts</option>
-  </select>
-  <button type="button" id="submit-button" name="button">submit</button>
-  <br>
-  {{iT}}
-  {{marketing}}
-  {{healthcare}}
-  {{creative}}
-  {{education}}
-  <button id="myButton">Click me</button>
+  <div class="div-box">
+    <h1>Career Pathways predictor</h1>
+    <select class="form-select" aria-label="Default select example" id="select1">
+      <option value="">-- Select an option --</option>
+      <option value="option1">Marketing</option>
+      <option value="option2">Healthcare</option>
+      <option value="option3">education</option>
+      <option value="option4">Information Technology</option>
+      <option value="option5">Creative arts</option>
+    </select>
+    <button type="button" id="submit-button" name="button" class="btn btn-dark">Select</button>
+    <br>
+    {{iT}}
+    {{marketing}}
+    {{healthcare}}
+    {{creative}}
+    {{education}}
+    <form class="" action="/" method="post">
+      <button id="myButton" class="btn btn-dark">Submit</button>
+    </form>
+    <pre id="predicted-output"></pre>
+  </div>
+
+
   <script>
     const iT = document.getElementById('iT');
     iT.style.display = 'none';
@@ -103,6 +110,8 @@
         const creative = document.getElementById('creative');
         creative.style.display = 'block';
       };
+      const button = document.getElementById('myButton');
+      button.style.display = 'block';
     });
     const submitButton2 = document.getElementById('myButton');
 

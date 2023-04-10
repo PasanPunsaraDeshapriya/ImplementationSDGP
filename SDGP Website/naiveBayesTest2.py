@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report
 
-path = 'dataset.csv'
+path = 'datasets/dataset.csv'
 df = pd.read_csv(path)
 
 df = df.drop(['career pathway'], axis=1)
@@ -38,16 +38,16 @@ clf_nb.fit(X_train, y_train)
 MultinomialNB()
 pred_nb = clf_nb.predict(X_test)
 
-# import pickle
-# with open('my_model.pkl', 'wb') as f:
-#      pickle.dump(clf_nb, f)
-#
-# f = open('my_model.pkl', 'rb')  # 'r' for reading; can be omitted
-# mod = pickle.load(f)
-#
-# print(classification_report(y_test,pred_nb))
-#
-# text = ['doctor']
-# text_features = tfidf.transform (text)
-# predictions = mod.predict (text_features)
-# print(predictions)
+import pickle
+with open('my_model.pkl', 'wb') as f:
+     pickle.dump(clf_nb, f)
+
+f = open('my_model.pkl', 'rb')  # 'r' for reading; can be omitted
+mod = pickle.load(f)
+
+print(classification_report(y_test,pred_nb))
+
+text = ['software engineer']
+text_features = tfidf.transform (text)
+predictions = mod.predict (text_features)
+print(predictions)

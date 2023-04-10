@@ -11,7 +11,7 @@ app = Flask(__name__)
 model=pickle.load(open('my_model.pkl', 'rb'))
 @app.route('/')
 def hello_world():
-    return render_template("careerFinderModel.html")
+    return render_template("test.html")
 
 @app.route('/',methods=['POST','GET'])
 def predict():
